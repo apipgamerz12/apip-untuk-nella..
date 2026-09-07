@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Nella ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#050207;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* ================================
+   BACKGROUND
+================================ */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-10;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,40,100,.17),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(170,30,100,.15),
+            transparent 35%
+        );
+}
+
+
+/* ================================
+   STARS
+================================ */
+
+#stars{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+
+    animation:
+        twinkle 3s
+        infinite
+        ease-in-out;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+
+}
+
+
+/* ================================
+   OPENING
+================================ */
+
+#opening{
+
+    position:fixed;
+    inset:0;
+
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    background:
+        radial-gradient(
+            circle,
+            #321421,
+            #0b050c 55%,
+            #020105
+        );
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+#opening.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.opening-content{
+    width:min(650px,100%);
+    animation:appear 1.5s ease;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(40px)
+            scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+.opening-heart{
+
+    font-size:85px;
+
+    animation:
+        heartbeat 1.4s
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 0 30px
+            rgba(255,40,100,.7)
+        );
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.2);
+    }
+
+    30%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.1);
+    }
+
+}
+
+.opening-small{
+
+    margin-top:25px;
+
+    color:#ff8fa8;
+
+    letter-spacing:5px;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+}
+
+.opening-title{
+
+    margin:20px 0;
+
+    font-size:
+        clamp(45px,10vw,80px);
+
+    line-height:.95;
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            #ff8fa8,
+            white
+        );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.opening-text{
+
+    color:#b8aeb4;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+.open-button{
+
+    border:none;
+
+    padding:
+        18px 38px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #d92860
+        );
+
+    box-shadow:
+        0 15px 50px
+        rgba(255,40,100,.4);
+
+    transition:.3s;
+}
+
+.open-button:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+}
+
+
+/* ================================
+   MUSIC
+================================ */
+
+#musicButton{
+
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:1000;
+}
+
+#musicButton.playing{
+
+    animation:
+        musicPulse 1.5s
+        infinite;
+}
+
+@keyframes musicPulse{
+
+    50%{
+        box-shadow:
+            0 0 40px
+            rgba(255,50,100,.7);
+    }
+
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.hero-content{
+
+    width:min(900px,100%);
+
+    animation:
+        appear 1.5s ease;
+}
+
+.eyebrow{
+
+    color:#ff829d;
+
+    letter-spacing:5px;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-size:
+        clamp(
+            55px,
+            12vw,
+            120px
+        );
+
+    line-height:.85;
+
+    margin-bottom:35px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff,
+            #ff8fa8,
+            #fff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#bdb3b8;
+
+    line-height:1.9;
+
+    font-size:17px;
+}
+
+.scroll{
+
+    margin-top:55px;
+
+    color:#ff829d;
+
+    font-size:13px;
+
+    animation:
+        bounce 2s
+        infinite;
+}
+
+@keyframes bounce{
+
+    50%{
+        transform:translateY(8px);
+    }
+
+}
+
+
+/* ================================
+   LETTER
+================================ */
+
+.section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:
+        100px 20px;
+}
+
+.letter{
+
+    width:min(780px,100%);
+
+    padding:
+        clamp(
+            30px,
+            7vw,
+            70px
+        );
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.5);
+}
+
+.letter-label{
+
+    color:#ff829d;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:11px;
+
+    margin-bottom:15px;
+}
+
+.letter h2{
+
+    font-size:
+        clamp(
+            38px,
+            7vw,
+            58px
+        );
+
+    margin-bottom:35px;
+}
+
+.letter p{
+
+    color:#d0c6cb;
+
+    line-height:2;
+
+    font-size:16px;
+
+    margin-bottom:22px;
+}
+
+.letter strong{
+
+    color:#ff91aa;
+}
+
+.signature{
+
+    margin-top:45px;
+
+    text-align:right;
+
+    color:#ff91aa;
+
+    font-style:italic;
+
+    line-height:1.8;
+}
+
+
+/* ================================
+   FOTO
+================================ */
+
+.photo-section{
+
+    min-height:100vh;
+
+    padding:
+        100px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.photo-section h2{
+
+    font-size:
+        clamp(
+            38px,
+            7vw,
+            60px
+        );
+
+    margin-bottom:45px;
+}
+
+
+/*
+   FRAME FOTO
+*/
+
+.photo-frame{
+
+    width:min(500px,90vw);
+
+    padding:9px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #70243e,
+            #ff9eb3
+        );
+
+    box-shadow:
+        0 30px 100px
+        rgba(255,40,100,.3);
+
+}
+
+
+/*
+   FOTO LOKAL
+*/
+
+.photo-frame img{
+
+    display:block;
+
+    width:100%;
+
+    height:600px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    background:#120a10;
+}
+
+
+.photo-caption{
+
+    max-width:500px;
+
+    margin-top:25px;
+
+    color:#aaa;
+
+    font-style:italic;
+
+    line-height:1.7;
+}
+
+
+/* ================================
+   MEMORIES
+================================ */
+
+.memories{
+
+    padding:
+        100px 20px;
+
+    text-align:center;
+}
+
+.memories h2{
+
+    font-size:
+        clamp(
+            38px,
+            7vw,
+            60px
+        );
+
+    margin-bottom:60px;
+}
+
+.memory-grid{
+
+    width:min(950px,100%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:20px;
+}
+
+.memory{
+
+    padding:35px 25px;
+
+    border-radius:22px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    transition:.3s;
+}
+
+.memory:hover{
+
+    transform:
+        translateY(-8px);
+
+    background:
+        rgba(255,50,100,.08);
+}
+
+.memory-icon{
+
+    font-size:35px;
+
+    margin-bottom:18px;
+}
+
+.memory h3{
+
+    margin-bottom:12px;
+}
+
+.memory p{
+
+    color:#999;
+
+    line-height:1.7;
+}
+
+
+/* ================================
+   FINAL
+================================ */
+
+.final{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.final-content{
+
+    width:min(750px,100%);
+}
+
+.final-heart{
+
+    font-size:90px;
+
+    animation:
+        heartbeat
+        1.3s
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 0 30px
+            rgba(255,40,100,.6)
+        );
+}
+
+.final h2{
+
+    font-size:
+        clamp(
+            40px,
+            8vw,
+            75px
+        );
+
+    line-height:1;
+
+    margin:
+        25px 0;
+}
+
+.final p{
+
+    color:#aaa;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+.forgive-button{
+
+    border:none;
+
+    padding:
+        18px 38px;
+
+    border-radius:50px;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #d92860
+        );
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 15px 50px
+        rgba(255,40,100,.3);
+
+    transition:.3s;
+}
+
+.forgive-button:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+}
+
+#finalMessage{
+
+    display:none;
+
+    margin-top:45px;
+
+    animation:
+        appear 1s ease;
+}
+
+#finalMessage h3{
+
+    color:#ff91aa;
+
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+#finalMessage p{
+
+    color:#ccc;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+
+    padding:
+        50px 20px;
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:13px;
+}
+
+
+/* ================================
+   FLOATING HEART
+================================ */
+
+.floating-heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    pointer-events:none;
+
+    z-index:50;
+
+    animation:
+        floatHeart
+        linear
+        forwards;
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    to{
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity:0;
+    }
+
+}
+
+
+/* ================================
+   CONFETTI
+================================ */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:8px;
+
+    height:14px;
+
+    z-index:999999;
+
+    pointer-events:none;
+
+    animation:
+        fall
+        3.5s
+        linear
+        forwards;
+}
+
+@keyframes fall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:600px){
+
+    .photo-frame{
+        width:92vw;
+    }
+
+    .photo-frame img{
+        height:500px;
+    }
+
+    .letter{
+        border-radius:22px;
+    }
+
+    .letter p{
+        font-size:15px;
+    }
+
+    .final-heart{
+        font-size:70px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     OPENING
+===================================================== -->
+
+<div id="opening">
+
+    <div class="opening-content">
+
+        <div class="opening-heart">
+            ❤️
+        </div>
+
+        <div class="opening-small">
+            Dari Apip untuk Nella
+        </div>
+
+        <div class="opening-title">
+            Nella...
+        </div>
+
+        <div class="opening-text">
+
+            Ada sesuatu yang ingin Apip sampaikan.
+
+            <br>
+
+            Sesuatu yang mungkin selama ini
+            sulit Apip katakan.
+
+            <br><br>
+
+            Tolong buka sampai selesai ya...
+
+        </div>
+
+        <button
+            class="open-button"
+            onclick="openMessage()"
+        >
+
+            Buka Pesan dari Apip ❤️
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MUSIK
+===================================================== -->
+
+<audio
+    id="music"
+    preload="auto"
+    loop
+>
+
+    <source
+        src="./lagu.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button
+    id="musicButton"
+    onclick="toggleMusic()"
+>
+
+    🎵
+
+</button>
+
+
+<!-- =====================================================
+     STARS
+===================================================== -->
+
+<div id="stars"></div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Dari Apip untuk Nella
+        </div>
+
+        <h1>
+            Maaf,<br>
+            Nella. ❤️
+        </h1>
+
+        <p>
+
+            Apip mungkin tidak selalu pandai
+            mengungkapkan perasaan.
+
+            Tapi kali ini Apip ingin mencoba
+            mengatakan semuanya dari hati.
+
+        </p>
+
+        <div class="scroll">
+            ↓ Baca perlahan ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SURAT
+===================================================== -->
+
+<section class="section">
+
+    <div class="letter">
+
+        <div class="letter-label">
+            Surat kecil dari Apip
+        </div>
+
+        <h2>
+            Untuk Nella...
+        </h2>
+
+        <p>
+
+            Nella,
+
+            mungkin kata
+            <strong>maaf</strong>
+            yang Apip tulis di sini
+            tidak akan langsung membuat
+            semuanya menjadi baik.
+
+        </p>
+
+        <p>
+
+            Tapi Apip ingin Nella tahu bahwa
+            Apip benar-benar menyesal.
+
+            Apip sadar mungkin ada perkataan,
+            sikap, atau kesalahan Apip
+            yang sudah membuat Nella kecewa
+            dan terluka.
+
+        </p>
+
+        <p>
+
+            Apip tidak ingin mencari alasan.
+
+            Apip juga tidak ingin menyalahkan
+            keadaan.
+
+            Kalau memang Apip salah,
+            Apip ingin mengakuinya.
+
+        </p>
+
+        <p>
+
+            Maaf kalau terkadang Apip terlalu egois.
+
+            Maaf kalau Apip kurang mendengarkan.
+
+            Maaf kalau Apip pernah membuat Nella
+            merasa tidak dihargai.
+
+        </p>
+
+        <p>
+
+            Seharusnya orang yang sayang sama Nella
+            bisa membuat Nella merasa aman,
+            bukan malah membuat Nella terluka.
+
+        </p>
+
+        <p>
+
+            Apip tidak bisa mengubah
+            apa yang sudah terjadi.
+
+            Tapi Apip masih bisa belajar
+            dari semuanya.
+
+        </p>
+
+        <p>
+
+            Apip ingin belajar lebih memahami Nella.
+
+            Belajar lebih mendengarkan.
+
+            Belajar menjaga perkataan.
+
+            Belajar menghargai hal-hal kecil.
+
+            Dan belajar untuk tidak mengulangi
+            kesalahan yang sama.
+
+        </p>
+
+        <p>
+
+            Kalau sekarang Nella masih marah,
+            Apip mengerti.
+
+            Kalau Nella masih kecewa,
+            Apip juga mengerti.
+
+            Kalau Nella membutuhkan waktu,
+            Apip akan menghargainya.
+
+        </p>
+
+        <p>
+
+            Apip tidak ingin memaksa Nella
+            untuk langsung melupakan semuanya.
+
+            Apip cuma ingin meminta kesempatan
+            untuk membuktikan bahwa Apip
+            benar-benar ingin berubah.
+
+        </p>
+
+        <p>
+
+            Karena dari sekian banyak orang
+            yang pernah hadir dalam hidup Apip,
+
+            Nella adalah seseorang yang
+            tidak ingin Apip kehilangan
+            hanya karena kesalahan Apip sendiri.
+
+        </p>
+
+        <p>
+
+            Jadi sekali lagi...
+
+            <strong>
+                maaf ya, Nella.
+            </strong>
+
+        </p>
+
+        <div class="signature">
+
+            Dari Apip,
+
+            <br>
+
+            yang mungkin masih banyak kurangnya,
+
+            <br>
+
+            tapi benar-benar ingin menjaga Nella. ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOTO
+===================================================== -->
+
+<section class="photo-section">
+
+    <h2>
+        Tentang Kita ❤️
+    </h2>
+
+    <div class="photo-frame">
+
+        <img
+            src="./foto-kita.jpg"
+            alt="Apip dan Nella"
+        >
+
+    </div>
+
+    <div class="photo-caption">
+
+        "Dari semua hal yang bisa Apip syukuri,
+        salah satunya adalah pernah dipertemukan
+        dengan Nella."
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section class="memories">
+
+    <h2>
+        Yang Apip Syukuri Tentang Nella
+    </h2>
+
+    <div class="memory-grid">
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                🫶
+            </div>
+
+            <h3>
+                Kesabaran Nella
+            </h3>
+
+            <p>
+
+                Terima kasih karena selama ini
+                Nella sudah mau menghadapi
+                kekurangan Apip.
+
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                🌙
+            </div>
+
+            <h3>
+                Waktu Bersama
+            </h3>
+
+            <p>
+
+                Hal-hal sederhana yang kita lakukan
+                bersama menjadi kenangan yang
+                sangat berarti untuk Apip.
+
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Kehadiran Nella
+            </h3>
+
+            <p>
+
+                Terima kasih sudah menjadi
+                seseorang yang membuat hidup Apip
+                terasa lebih berwarna.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <h2>
+
+            Nella...
+
+            <br>
+
+            Boleh Apip tetap di sini?
+
+        </h2>
+
+        <p>
+
+            Apip tidak meminta semuanya
+            kembali seperti dulu dalam satu malam.
+
+            Apip cuma ingin kita punya kesempatan
+            untuk memperbaikinya bersama.
+
+            Pelan-pelan.
+
+            Dengan lebih banyak memahami,
+            lebih banyak menghargai,
+            dan lebih sedikit saling menyakiti.
+
+        </p>
+
+        <button
+            class="forgive-button"
+            onclick="forgive()"
+        >
+
+            Apip akan berusaha lebih baik ❤️
+
+        </button>
+
+
+        <div id="finalMessage">
+
+            <h3>
+                Terima kasih, Nella. 🥹❤️
+            </h3>
+
+            <p>
+
+                Apip mungkin tidak sempurna.
+
+                Tapi perasaan Apip ke Nella
+                sungguh-sungguh.
+
+                Kalau masih ada kesempatan,
+                mari kita mulai lagi.
+
+                <br><br>
+
+                <strong>
+                    Apip sayang Nella. ❤️
+                </strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Dibuat dengan hati ❤️
+    <br>
+    Apip → Nella
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   STARS
+===================================================== */
+
+const stars =
+    document.getElementById("stars");
+
+for(let i=0;i<160;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"%";
+
+    star.style.top =
+        Math.random()*100+"%";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    stars.appendChild(star);
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
+function openMessage(){
+
+    const opening =
+        document.getElementById("opening");
+
+    opening.classList.add("hide");
+
+
+    /*
+       Karena tombol ditekan oleh pengguna,
+       browser mengizinkan audio dimainkan.
+    */
+
+    music.volume = 0.8;
+
+    music.play()
+        .then(()=>{
+
+            musicButton.innerHTML="⏸️";
+
+            musicButton.classList.add(
+                "playing"
+            );
+
+        })
+        .catch(error=>{
+
+            console.log(
+                "Musik tidak dapat dimainkan:",
+                error
+            );
+
+        });
+
+
+    startHearts();
+
+}
+
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        music.play()
+            .then(()=>{
+
+                musicButton.innerHTML="⏸️";
+
+                musicButton.classList.add(
+                    "playing"
+                );
+
+            });
+
+    }else{
+
+        music.pause();
+
+        musicButton.innerHTML="🎵";
+
+        musicButton.classList.remove(
+            "playing"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+let heartInterval;
+
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+
+    const types=[
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘",
+        "💓"
+    ];
+
+
+    heart.innerHTML =
+        types[
+            Math.floor(
+                Math.random()*types.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()*100+"vw";
+
+
+    heart.style.fontSize =
+        (
+            15+
+            Math.random()*22
+        )+"px";
+
+
+    heart.style.animationDuration =
+        (
+            6+
+            Math.random()*5
+        )+"s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },12000);
+
+}
+
+
+function startHearts(){
+
+    if(heartInterval)
+        return;
+
+    heartInterval =
+        setInterval(
+            createHeart,
+            1300
+        );
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti(){
+
+    const colors=[
+        "#ff416c",
+        "#ff91aa",
+        "#ffffff",
+        "#ffd1dc",
+        "#ffcc70"
+    ];
+
+
+    for(let i=0;i<150;i++){
+
+        const piece =
+            document.createElement(
+                "div"
+            );
+
+        piece.className =
+            "confetti";
+
+        piece.style.left =
+            Math.random()*100+"vw";
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+        piece.style.animationDelay =
+            Math.random()*1.5+"s";
+
+        document.body.appendChild(
+            piece
+        );
+
+
+        setTimeout(()=>{
+
+            piece.remove();
+
+        },4500);
+
+    }
+
+}
+
+
+/* =====================================================
+   FINAL BUTTON
+===================================================== */
+
+function forgive(){
+
+    const message =
+        document.getElementById(
+            "finalMessage"
+        );
+
+
+    message.style.display="block";
+
+
+    createConfetti();
+
+
+    for(let i=0;i<40;i++){
+
+        setTimeout(
+            createHeart,
+            i*80
+        );
+
+    }
+
+
+    setTimeout(()=>{
+
+        message.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    },200);
+
+}
+
+</script>
+
+</body>
+</html>
